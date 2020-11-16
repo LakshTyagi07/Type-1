@@ -1,7 +1,6 @@
 import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import PropTypes from "prop-types"
 
 export default function ({
   src,
@@ -55,9 +54,4 @@ export default function ({
       {...rest}
     />
   )
-}
-
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string,
 }
