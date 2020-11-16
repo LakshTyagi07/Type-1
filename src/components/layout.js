@@ -5,43 +5,42 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { ThemeProvider } from "styled-components"
 
-import Header from "./header"
-import "./layout.css"
+import { GlobalStyles } from "../styles/global"
+import "../styles/reset.css"
+import Nav from "./Nav"
+import Footer from "./Footer"
+
+const lightTheme = {
+  foregroundColor: "#000",
+  backgroundColor: "#fff",
+  secondaryBackgroundColor: "#fafafa",
+}
+
+const darkTheme = {
+  foregroundColor: "#fff",
+  backgroundColor: "#000",
+  secondaryBackgroundColor: "#1a1a1a",
+}
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const [theme, setTheme] = useState("light")
+
+  const toggleTheme = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light")
+  }
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <Nav />
+        <main> {children}</main>
+        <Footer />
+      </ThemeProvider>
     </>
   )
 }
