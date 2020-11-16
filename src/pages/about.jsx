@@ -35,7 +35,7 @@ const AboutWrapper = styled(Wrapper)`
 export default function () {
   return (
     <Layout>
-      <SEO title="About Meala" />
+      <SEO title="About" />
       <Hero>
         <AboutWrapper>
           <Image className="app-icon" src={"appicon.png"} alt="Meala" />
