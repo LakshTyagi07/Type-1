@@ -23,7 +23,7 @@ const lightTheme = {
 const darkTheme = {
   foregroundColor: "#fff",
   backgroundColor: "#000",
-  secondaryBackgroundColor: "#1a1a1a",
+  secondaryBackgroundColor: "#101010",
 }
 
 const Layout = ({ children }) => {
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
         <GlobalStyles />
         <Nav />
         <main> {children}</main>
-        <Footer />
+        <Footer theme={theme} toggleTheme={toggleTheme} />
       </ThemeProvider>
     </>
   )

@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { Wrapper } from "../styles/base"
+import { MoonIcon, SunIcon } from "./Icons"
 
 const FooterView = styled.footer`
   padding: 24px;
@@ -34,7 +35,15 @@ const FooterLink = styled(Link)`
   }
 `
 
-export default function () {
+const ThemeToggler = styled.div`
+  color: ${({ theme }) => theme.foregroundColor};
+  cursor: pointer;
+  svg {
+    transform: scale(1.2);
+  }
+`
+
+export default function ({ theme, toggleTheme }) {
   return (
     <FooterView>
       <FooterWrapper>
@@ -43,6 +52,9 @@ export default function () {
           <FooterLink to="/legal/privacy">Privacy</FooterLink>
           <FooterLink to="/legal/terms">Terms</FooterLink>
         </FooterLinks>
+        <ThemeToggler onClick={toggleTheme}>
+          {theme === "light" ? <SunIcon /> : <MoonIcon />}
+        </ThemeToggler>
       </FooterWrapper>
     </FooterView>
   )

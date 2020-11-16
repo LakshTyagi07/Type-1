@@ -79,6 +79,7 @@ const FeatureTeaser = styled.div`
 const Banner = styled.section`
   padding: 64px 24px;
   background: ${props => props.theme.secondaryBackgroundColor};
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 `
 
 const BannerWrapper = styled(Wrapper)`
@@ -174,7 +175,7 @@ export default function () {
         </FeatureWrapper>
       </Feature>
 
-      <Feature greyBackground>
+      <Feature>
         <FeatureWrapper>
           <FeatureCopy>
             <Heading2>One Picture</Heading2>
@@ -193,7 +194,7 @@ export default function () {
         </FeatureWrapper>
       </Feature>
 
-      <Feature>
+      <Feature greyBackground>
         <FeatureWrapper>
           <FeatureCopy reversed>
             <Heading2>Detailed Data</Heading2>
