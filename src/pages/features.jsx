@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "../components/Image"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {
