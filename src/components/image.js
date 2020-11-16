@@ -2,7 +2,7 @@ import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-export default function ({
+export default function Image({
   src,
   backgroundColor,
   className,
