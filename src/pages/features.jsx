@@ -102,7 +102,7 @@ const ExternalLink = styled.a`
 export default function () {
   return (
     <Layout>
-      <SEO title="Features - Meala" />
+      <SEO title="Features" />
       <Hero>
         <HeroWrapper>
           <HeroCopy>
