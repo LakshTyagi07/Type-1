@@ -20,7 +20,7 @@ const Copyright = styled.div`
 
 const FooterLinks = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
   gap: 48px;
 `
 
@@ -51,10 +51,10 @@ export default function ({ theme, toggleTheme }) {
         <FooterLinks>
           <FooterLink to="/legal/privacy">Privacy</FooterLink>
           <FooterLink to="/legal/terms">Terms</FooterLink>
+          <ThemeToggler onClick={toggleTheme}>
+            {theme === "light" ? <SunIcon /> : <MoonIcon />}
+          </ThemeToggler>
         </FooterLinks>
-        <ThemeToggler onClick={toggleTheme}>
-          {theme === "light" ? <SunIcon /> : <MoonIcon />}
-        </ThemeToggler>
       </FooterWrapper>
     </FooterView>
   )
