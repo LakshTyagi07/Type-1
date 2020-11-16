@@ -14,10 +14,6 @@ import {
 
 const Hero = styled.section`
   padding: 48px 24px;
-
-  @media screen and (min-width: 960px) {
-    padding: 64px 32px;
-  }
 `
 
 const HeroWrapper = styled(Wrapper)`
@@ -32,14 +28,11 @@ const HeroWrapper = styled(Wrapper)`
 const HeroCopy = styled.div`
   h1 {
     margin-bottom: 24px;
-    background: linear-gradient(0deg, #09139e, #e62b63);
+    background: linear-gradient(127.07deg, #e94511 -5.82%, #411402 108.38%);
     line-height: 1.2;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-  }
-  p {
-    opacity: 0.7;
   }
 `
 
