@@ -12,63 +12,57 @@ import {
   Wrapper,
 } from "../styles/base"
 import { isAndroid, isIOS, isMobile } from "react-device-detect"
-import { LogoIcon } from "../components/Icons"
+import { LogoIcon, ScrollIcon } from "../components/Icons"
 
 const Hero = styled.section`
-  padding: 48px 24px;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+`
+
+const HeroWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 100%;
+  height: 100%;
+`
+
+const CopySection = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 40px 120px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 `
 
-const HeroWrapper = styled(Wrapper)`
-  @media screen and (min-width: 960px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    align-items: center;
-  }
-`
-
-const HeroCopy = styled.div`
-  h1 {
-    margin-top: 2.5rem;
-  }
+const HeroContent = styled.div`
   p {
-    margin: 1.25rem 0;
-  }
-  @media screen and (min-width: 960px) {
-    p {
-      margin: 1.5rem 0;
-    }
+    margin: 24px 0;
   }
 `
 
-const HeroTeaser = styled.div`
-  @media screen and (min-width: 960px) {
-    height: 80vh;
-    position: relative;
-    video {
-      transform: scale(1.1);
-    }
-  }
+const TeaserSection = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #ebffec;
+`
+
+const Highlight = styled.span`
+  color: ${props => props.theme.accentColor};
 `
 
 const StoreButtons = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-
-  @media screen and (min-width: 960px) {
-    grid-template-columns: repeat(2, 165px);
-  }
+  width: 172px;
 `
+
+const ExternalLink = styled.a``
 
 const Feature = styled.section`
   padding: 48px 24px;
-  background-color: ${({ theme, greyBackground }) =>
-    greyBackground ? theme.secondaryBackgroundColor : theme.backgroundColor};
+  background-color: ${({ theme, alternateBackground }) =>
+    alternateBackground ? "#F4FFF4" : theme.backgroundColor};
   @media screen and (min-width: 960px) {
     padding: 64px 32px;
   }
@@ -101,95 +95,50 @@ const FeatureTeaser = styled.div`
   }
 `
 
-const Banner = styled.section`
-  padding: 64px 24px;
-  background: ${props => props.theme.secondaryBackgroundColor};
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-`
-
-const BannerWrapper = styled(Wrapper)`
-  max-width: 840px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h3 {
-    margin-bottom: 24px;
-  }
-`
-
-const ExternalLink = styled.a`
-  .store-cta {
-    width: 165px;
-  }
-`
-
-const Highlight = styled.span`
-  display: inline;
-  color: ${props => props.theme.accentColor};
-`
-
-const LogoWrapper = styled.div`
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  background-color: ${props => props.theme.backgroundColor};
-`
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
     <Hero>
       <HeroWrapper>
-        <HeroCopy>
-          <LogoWrapper>
-            <LogoIcon />
-          </LogoWrapper>
-          <Heading1>Diabetes made simple.</Heading1>
-          <Paragraph>Accurate insulin doses with a snapshot.</Paragraph>
-          <StoreButtons>
-            {isMobile && isIOS && (
-              <ExternalLink href="/">
-                <Image className="store-cta" src="appstore.png" />
-              </ExternalLink>
-            )}
-
-            {isMobile && isAndroid && (
-              <ExternalLink href="/">
-                <Image className="store-cta" src="playstore.png" />
-              </ExternalLink>
-            )}
-
-            {!isMobile && (
-              <>
+        <CopySection>
+          <LogoIcon />
+          <HeroContent>
+            <Heading1>
+              Diabetes
+              <div>
+                made <Highlight>simple.</Highlight>
+              </div>
+            </Heading1>
+            <Paragraph>Accurate insulin doses with a snapshot.</Paragraph>
+            <StoreButtons>
+              {isMobile && isIOS && (
                 <ExternalLink href="/">
                   <Image className="store-cta" src="appstore.png" />
                 </ExternalLink>
-              </>
-            )}
-          </StoreButtons>
-        </HeroCopy>
-        <HeroTeaser>
-          <video
-            width="100%"
-            height="100%"
-            autoPlay={true}
-            playsInline
-            muted
-            loop
-          >
-            <source src={HeroTrailer} type="video/mp4" />
-          </video>
-        </HeroTeaser>
+              )}
+
+              {!isMobile && (
+                <>
+                  <ExternalLink href="/">
+                    <Image className="store-cta" src="appstore.png" />
+                  </ExternalLink>
+                </>
+              )}
+            </StoreButtons>
+          </HeroContent>
+          <ScrollIcon />
+        </CopySection>
+
+        <TeaserSection>
+          <Image src="hero.png" />
+        </TeaserSection>
       </HeroWrapper>
     </Hero>
-    <Feature greyBackground>
+
+    <Feature>
       <FeatureWrapper>
-        <FeatureCopy reversed>
+        <FeatureCopy>
           <Heading2>
             Your food{" "}
             <span className="block">
@@ -214,7 +163,7 @@ const IndexPage = () => (
       </FeatureWrapper>
     </Feature>
 
-    <Feature>
+    <Feature alternateBackground>
       <FeatureWrapper>
         <FeatureCopy>
           <Heading2>
@@ -229,15 +178,15 @@ const IndexPage = () => (
           <Image
             className="feature-image"
             src="features/dosage.png"
-            alt="Dosage"
+            alt="Dosage image"
           />
         </FeatureTeaser>
       </FeatureWrapper>
     </Feature>
 
-    <Feature greyBackground>
+    <Feature>
       <FeatureWrapper>
-        <FeatureCopy reversed>
+        <FeatureCopy>
           <Heading2>
             <Highlight>Keep an eye</Highlight> on your health
           </Heading2>
@@ -255,11 +204,11 @@ const IndexPage = () => (
       </FeatureWrapper>
     </Feature>
 
-    <Feature>
+    <Feature alternateBackground>
       <FeatureWrapper>
         <FeatureCopy>
           <Heading2>
-            <Highlight>Your data</Highlight> stays with you.
+            <Highlight>Your data</Highlight> stays <br /> with you.
           </Heading2>
           <Paragraph>
             Without the need for an account, your health data stays on the app.
@@ -268,21 +217,12 @@ const IndexPage = () => (
         <FeatureTeaser>
           <Image
             className="feature-image"
-            src="features/one-picture.png"
+            src="features/privacy.png"
             alt="Get snapshot of your meal to recognize food."
           />
         </FeatureTeaser>
       </FeatureWrapper>
     </Feature>
-
-    <Banner>
-      <BannerWrapper>
-        <Heading3>Start using Type 1</Heading3>
-        <ExternalLink href="/">
-          <Image className="store-cta" src="appstore.png" />
-        </ExternalLink>
-      </BannerWrapper>
-    </Banner>
   </Layout>
 )
 

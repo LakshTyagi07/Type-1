@@ -38,7 +38,7 @@ export default function () {
       <SEO title="About" />
       <Hero>
         <AboutWrapper>
-          <Image className="app-icon" src={"appicon.png"} alt="Meala" />
+          <Image className="app-icon" src={"appicon.png"} alt="Type 1" />
           <Heading1>About Us</Heading1>
           <Paragraph>
             This app is targeted towards people who live with diabetes. Their
@@ -52,14 +52,14 @@ export default function () {
             generate an insulin dosage amount. This is often a hassle and can be
             very time-consuming.
           </Paragraph>
-          <Heading4>How does Meala help?</Heading4>
+          <Heading4>How does Type 1 help?</Heading4>
           <Paragraph>
-            Meala will use artifical intelligence to train itself based on meal
+            Type 1 will use artifical intelligence to train itself based on meal
             pictures taken by the user. After the first few snapshot of a dish,
-            Meala will recognize the food and deliver an insulin dosage based on
-            personal insulin to carb ratio and current glucose levels. A single
-            snapshot of your meal delivers your insulin dosage so that you don’t
-            have to sit around calculating your carbs.
+            Type 1 will recognize the food and deliver an insulin dosage based
+            on personal insulin to carb ratio and current glucose levels. A
+            single snapshot of your meal delivers your insulin dosage so that
+            you don’t have to sit around calculating your carbs.
           </Paragraph>
           <Heading4>What we use?</Heading4>
           <Paragraph>

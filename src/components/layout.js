@@ -18,14 +18,14 @@ const lightTheme = {
   foregroundColor: "#000",
   backgroundColor: "#fff",
   secondaryBackgroundColor: "#fafafa",
-  accentColor: "#09f",
+  accentColor: "#229C4C",
 }
 
 const darkTheme = {
   foregroundColor: "#fff",
   backgroundColor: "#000",
   secondaryBackgroundColor: "#101010",
-  accentColor: "#09f",
+  accentColor: "#229C4C",
 }
 
 const Layout = ({ children }) => {
