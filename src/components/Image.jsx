@@ -2,6 +2,7 @@ import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
+import "../styles/fonts.css"
 
 export default function Image({
   src,

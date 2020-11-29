@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  max-width: 1080px;
+  max-width: 1000px;
   margin: 0 auto;
 `
 
 export const Heading1 = styled.h1`
-  font-size: clamp(32px, 4.4vw, 64px);
+  font-size: clamp(32px, 3.88vw, 56px);
   font-weight: 800;
   line-height: 1.1;
 `
@@ -15,6 +15,15 @@ export const Heading2 = styled.h2`
   font-size: clamp(28px, 3.3vw, 48px);
   font-weight: 800;
   line-height: 1.1;
+  span {
+    display: inline;
+  }
+
+  @media screen and (min-width: 640px) {
+    span.block {
+      display: block;
+    }
+  }
 `
 
 export const Heading3 = styled.h3`

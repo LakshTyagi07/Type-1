@@ -18,12 +18,14 @@ const lightTheme = {
   foregroundColor: "#000",
   backgroundColor: "#fff",
   secondaryBackgroundColor: "#fafafa",
+  accentColor: "#09f",
 }
 
 const darkTheme = {
   foregroundColor: "#fff",
   backgroundColor: "#000",
   secondaryBackgroundColor: "#101010",
+  accentColor: "#09f",
 }
 
 const Layout = ({ children }) => {
@@ -37,7 +39,6 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles />
-        <Nav />
         <main> {children}</main>
         <Footer theme={theme} toggleTheme={toggleTheme} />
       </ThemeProvider>
