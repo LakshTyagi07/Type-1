@@ -47,13 +47,10 @@ export default function ({ theme, toggleTheme }) {
   return (
     <FooterView>
       <FooterWrapper>
-        <Copyright>© Meala {new Date().getFullYear()}.</Copyright>
+        <Copyright>© Type 1 {new Date().getFullYear()}.</Copyright>
         <FooterLinks>
-          <FooterLink to="/legal/privacy">Privacy</FooterLink>
-          <FooterLink to="/legal/terms">Terms</FooterLink>
-          <ThemeToggler onClick={toggleTheme}>
-            {theme === "light" ? <SunIcon /> : <MoonIcon />}
-          </ThemeToggler>
+          <FooterLink to="/about">About</FooterLink>
+          <FooterLink to="/privacy">Privacy</FooterLink>
         </FooterLinks>
       </FooterWrapper>
     </FooterView>

@@ -1,18 +1,18 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  max-width: 1000px;
+  max-width: 80vw;
   margin: 0 auto;
 `
 
 export const Heading1 = styled.h1`
-  font-size: clamp(32px, 3.88vw, 56px);
+  font-size: clamp(32px, 5vw, 72px);
   font-weight: 800;
   line-height: 1.1;
 `
 
 export const Heading2 = styled.h2`
-  font-size: clamp(28px, 3.3vw, 48px);
+  font-size: clamp(28px, 3.9vw, 56px);
   font-weight: 800;
   line-height: 1.1;
   span {
@@ -35,6 +35,12 @@ export const Heading3 = styled.h3`
 export const Heading4 = styled.h4`
   font-size: clamp(24px, 2.75vw, 40px);
   font-weight: 700;
+  line-height: 1.1;
+`
+
+export const Heading5 = styled.h5`
+  font-size: clamp(24px, 2.75vw, 32px);
+  font-weight: 600;
   line-height: 1.1;
 `
 

@@ -343,3 +343,34 @@ export const LogoIcon = () => {
     </svg>
   )
 }
+
+export const ScrollIcon = () => {
+  return (
+    <svg
+      width="22"
+      height="32"
+      viewBox="0 0 22 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="19.3333"
+        height="30"
+        rx="9.66667"
+        fill="white"
+        stroke="black"
+        strokeWidth="2"
+      />
+      <rect
+        x="9.33331"
+        y="8"
+        width="2.66667"
+        height="8"
+        rx="1.33333"
+        fill="black"
+      />
+    </svg>
+  )
+}
