@@ -178,7 +178,7 @@ const IndexPage = () => (
           <Image
             className="feature-image"
             src="features/dosage.png"
-            alt="Dosage"
+            alt="Dosage image"
           />
         </FeatureTeaser>
       </FeatureWrapper>
