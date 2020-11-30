@@ -6,6 +6,7 @@ import { MoonIcon, SunIcon } from "./Icons"
 
 const FooterView = styled.footer`
   padding: 24px;
+  background-color: #fafafa;
 `
 
 const FooterWrapper = styled(Wrapper)`
@@ -20,7 +21,7 @@ const Copyright = styled.div`
 
 const FooterLinks = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
   gap: 48px;
 `
 
@@ -32,14 +33,6 @@ const FooterLink = styled(Link)`
   }
   &:hover {
     opacity: 1;
-  }
-`
-
-const ThemeToggler = styled.div`
-  color: ${({ theme }) => theme.foregroundColor};
-  cursor: pointer;
-  svg {
-    transform: scale(1.2);
   }
 `
 

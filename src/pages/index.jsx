@@ -2,39 +2,55 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Image from "../components/Image"
-import HeroTrailer from "../videos/hero.mp4"
 import SEO from "../components/seo"
 import {
   Heading1,
   Heading2,
-  Heading3,
+  Heading4,
   Paragraph,
   Wrapper,
 } from "../styles/base"
-import { isAndroid, isIOS, isMobile } from "react-device-detect"
-import { LogoIcon, ScrollIcon } from "../components/Icons"
+
+import { LogoIcon } from "../components/Icons"
 
 const Hero = styled.section`
-  width: 100vw;
-  height: 100vh;
+  @media screen and (min-width: 1000px) {
+    width: 100vw;
+    height: 100vh;
+    max-height: 840px;
+  }
 `
 
 const HeroWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  width: 100%;
-  height: 100%;
+  @media screen and (min-width: 960px) {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 840px;
+    align-items: center;
+  }
 `
 
 const CopySection = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 40px 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 32px;
+
+  h1 {
+    margin-top: 32px;
+  }
+
+  @media screen and (min-width: 960px) {
+    width: 100%;
+    height: 100%;
+    padding: 40px 120px;
+    h1 {
+      margin-top: 0;
+    }
+  }
 `
 
 const HeroContent = styled.div`
@@ -46,7 +62,13 @@ const HeroContent = styled.div`
 const TeaserSection = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #ebffec;
+  background-color: #f2f5ff;
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: scale-down;
+  }
 `
 
 const Highlight = styled.span`
@@ -62,7 +84,7 @@ const ExternalLink = styled.a``
 const Feature = styled.section`
   padding: 48px 24px;
   background-color: ${({ theme, alternateBackground }) =>
-    alternateBackground ? "#F4FFF4" : theme.backgroundColor};
+    alternateBackground ? "#fafafa" : theme.backgroundColor};
   @media screen and (min-width: 960px) {
     padding: 64px 32px;
   }
@@ -95,6 +117,22 @@ const FeatureTeaser = styled.div`
   }
 `
 
+const Banner = styled.section`
+  padding: 40px 24px;
+`
+
+const BannerWrapper = styled(Wrapper)`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    margin-bottom: 24px;
+  }
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -112,26 +150,16 @@ const IndexPage = () => (
             </Heading1>
             <Paragraph>Accurate insulin doses with a snapshot.</Paragraph>
             <StoreButtons>
-              {isMobile && isIOS && (
-                <ExternalLink href="/">
-                  <Image className="store-cta" src="appstore.png" />
-                </ExternalLink>
-              )}
-
-              {!isMobile && (
-                <>
-                  <ExternalLink href="/">
-                    <Image className="store-cta" src="appstore.png" />
-                  </ExternalLink>
-                </>
-              )}
+              <ExternalLink href="/">
+                <Image className="store-cta" src="appstore.png" />
+              </ExternalLink>
             </StoreButtons>
           </HeroContent>
-          <ScrollIcon />
+          <div></div>
         </CopySection>
 
         <TeaserSection>
-          <Image src="hero.png" />
+          <Image src="hero.png" className="hero-image" />
         </TeaserSection>
       </HeroWrapper>
     </Hero>
@@ -223,6 +251,17 @@ const IndexPage = () => (
         </FeatureTeaser>
       </FeatureWrapper>
     </Feature>
+
+    <Banner>
+      <BannerWrapper>
+        <Heading4>Start Using Type 1</Heading4>
+        <StoreButtons>
+          <ExternalLink href="/">
+            <Image className="store-cta" src="appstore.png" />
+          </ExternalLink>
+        </StoreButtons>
+      </BannerWrapper>
+    </Banner>
   </Layout>
 )
 
