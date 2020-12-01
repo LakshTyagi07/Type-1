@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `
 
 export const Heading1 = styled.h1`
-  font-size: clamp(32px, 5vw, 72px);
+  font-size: clamp(32px, 4.4vw, 64px);
   font-weight: 800;
   line-height: 1.1;
 `

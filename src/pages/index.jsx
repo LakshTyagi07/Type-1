@@ -11,63 +11,38 @@ import {
   Wrapper,
 } from "../styles/base"
 
-import { LogoIcon } from "../components/Icons"
+import { LogoIcon, SquareIcon } from "../components/Icons"
+
+import HeroVideo from "../videos/hero.mp4"
 
 const Hero = styled.section`
+  padding: 40px 24px;
   @media screen and (min-width: 1000px) {
-    width: 100vw;
-    height: 100vh;
-    max-height: 840px;
-  }
-`
-
-const HeroWrapper = styled.div`
-  @media screen and (min-width: 960px) {
+    padding: 20px;
+    min-height: 100vh;
     display: flex;
-    gap: 0;
-    width: 100%;
-    height: 100%;
-    max-height: 840px;
     align-items: center;
   }
 `
 
-const CopySection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 32px;
-
-  h1 {
-    margin-top: 32px;
-  }
-
-  @media screen and (min-width: 960px) {
-    width: 100%;
-    height: 100%;
-    padding: 40px 120px;
-    h1 {
-      margin-top: 0;
-    }
+const HeroWrapper = styled(Wrapper)`
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 48px;
   }
 `
 
-const HeroContent = styled.div`
-  p {
-    margin: 24px 0;
-  }
+const HeroCopy = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
 `
 
-const TeaserSection = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #f2f5ff;
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: scale-down;
+const HeroTeaser = styled.div`
+  @media screen and (min-width: 1000px) {
+    height: 90vh;
   }
 `
 
@@ -106,14 +81,14 @@ const FeatureCopy = styled.div`
   }
 
   @media screen and (min-width: 960px) {
-    order: ${({ reversed }) => (reversed ? 2 : 1)};
+    order: ${props => (props.reversed ? 2 : 1)};
   }
 `
 
 const FeatureTeaser = styled.div`
   order: 2;
   @media screen and (min-width: 960px) {
-    order: ${({ reversed }) => (reversed ? 1 : 2)};
+    order: ${props => (props.reversed ? 1 : 2)};
   }
 `
 
@@ -139,34 +114,38 @@ const IndexPage = () => (
 
     <Hero>
       <HeroWrapper>
-        <CopySection>
-          <LogoIcon />
-          <HeroContent>
-            <Heading1>
-              Diabetes
-              <div>
-                made <Highlight>simple.</Highlight>
-              </div>
-            </Heading1>
-            <Paragraph>Accurate insulin doses with a snapshot.</Paragraph>
-            <StoreButtons>
-              <ExternalLink href="/">
-                <Image className="store-cta" src="appstore.png" />
-              </ExternalLink>
-            </StoreButtons>
-          </HeroContent>
-          <div></div>
-        </CopySection>
+        <HeroCopy>
+          <SquareIcon />
+          <Heading1>Accurate insulin doses with a snapshot.</Heading1>
+          <Paragraph>
+            A single snapshot of your meal delivers your insulin dosage so that
+            you don’t have to sit around calculating your carbs.
+          </Paragraph>
+          <StoreButtons>
+            <ExternalLink href="/">
+              <Image className="store-cta" src="appstore.png" />
+            </ExternalLink>
+          </StoreButtons>
+        </HeroCopy>
 
-        <TeaserSection>
-          <Image src="hero.png" className="hero-image" />
-        </TeaserSection>
+        <HeroTeaser>
+          <video
+            width="100%"
+            height="100%"
+            autoPlay={true}
+            playsInline
+            muted
+            loop
+          >
+            <source src={HeroVideo} type="video/mp4" />
+          </video>
+        </HeroTeaser>
       </HeroWrapper>
     </Hero>
 
     <Feature>
       <FeatureWrapper>
-        <FeatureCopy>
+        <FeatureCopy reversed>
           <Heading2>
             Your food{" "}
             <span className="block">
@@ -177,8 +156,10 @@ const IndexPage = () => (
             </span>
           </Heading2>
           <Paragraph>
-            Train AI to recognize your meals from a database of the food you eat
-            on the daily.
+            Train AI to recognize the food you eat on the regular. After
+            labeling your food for the first time, Type 1 will identify the meal
+            and recommend an insulin dose the next time you click a picture of
+            it.
           </Paragraph>
         </FeatureCopy>
         <FeatureTeaser reversed>
@@ -199,7 +180,9 @@ const IndexPage = () => (
           </Heading2>
           <Paragraph>
             No carbs. No calories. Just a picture of your food to know how much
-            insulin you need.
+            insulin you need. Type 1 will tune your estimated doses and alter
+            your recommended insulin based on real time blood sugar levels and
+            personal insulin sensitivity.
           </Paragraph>
         </FeatureCopy>
         <FeatureTeaser>
@@ -214,7 +197,7 @@ const IndexPage = () => (
 
     <Feature>
       <FeatureWrapper>
-        <FeatureCopy>
+        <FeatureCopy reversed>
           <Heading2>
             <Highlight>Keep an eye</Highlight> on your health
           </Heading2>
