@@ -21,7 +21,7 @@ const Copyright = styled.div`
 
 const FooterLinks = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
   gap: 48px;
 `
 
@@ -43,6 +43,7 @@ export default function ({ theme, toggleTheme }) {
         <Copyright>© Type 1 {new Date().getFullYear()}.</Copyright>
         <FooterLinks>
           <FooterLink to="/about">About</FooterLink>
+          <FooterLink to="/support">Support</FooterLink>
           <FooterLink to="/privacy">Privacy</FooterLink>
         </FooterLinks>
       </FooterWrapper>
