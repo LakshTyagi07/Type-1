@@ -42,7 +42,7 @@ const HeroCopy = styled.div`
 
 const HeroTeaser = styled.div`
   @media screen and (min-width: 1000px) {
-    height: 90vh;
+    height: 80vh;
   }
 `
 
@@ -94,6 +94,7 @@ const FeatureTeaser = styled.div`
 
 const Banner = styled.section`
   padding: 40px 24px;
+  background-color: #fafafa;
 `
 
 const BannerWrapper = styled(Wrapper)`
@@ -143,7 +144,7 @@ const IndexPage = () => (
       </HeroWrapper>
     </Hero>
 
-    <Feature>
+    <Feature alternateBackground>
       <FeatureWrapper>
         <FeatureCopy reversed>
           <Heading2>
@@ -172,7 +173,7 @@ const IndexPage = () => (
       </FeatureWrapper>
     </Feature>
 
-    <Feature alternateBackground>
+    <Feature>
       <FeatureWrapper>
         <FeatureCopy>
           <Heading2>
@@ -195,7 +196,7 @@ const IndexPage = () => (
       </FeatureWrapper>
     </Feature>
 
-    <Feature>
+    <Feature alternateBackground>
       <FeatureWrapper>
         <FeatureCopy reversed>
           <Heading2>
@@ -215,7 +216,7 @@ const IndexPage = () => (
       </FeatureWrapper>
     </Feature>
 
-    <Feature alternateBackground>
+    <Feature>
       <FeatureWrapper>
         <FeatureCopy>
           <Heading2>
