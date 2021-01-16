@@ -117,11 +117,8 @@ const IndexPage = () => (
       <HeroWrapper>
         <HeroCopy>
           <SquareIcon />
-          <Heading1>Accurate insulin doses with a snapshot.</Heading1>
-          <Paragraph>
-            A single snapshot of your meal delivers your insulin dosage so that
-            you don’t have to sit around calculating your carbs.
-          </Paragraph>
+          <Heading1>Diabetes made simple.</Heading1>
+          <Paragraph>Track insulin doses with a snapshot.</Paragraph>
           <StoreButtons>
             <ExternalLink href="/">
               <Image className="store-cta" src="appstore.png" />
@@ -157,10 +154,9 @@ const IndexPage = () => (
             </span>
           </Heading2>
           <Paragraph>
-            Train AI to recognize the food you eat on the regular. After
-            labeling your food for the first time, Type 1 will identify the meal
-            and recommend an insulin dose the next time you click a picture of
-            it.
+            Help Type 1 recognize the food you eat. After labeling your food for
+            the first time, Type 1 will identify the meal and remind you with
+            your insulin dose the next time you click a picture of it.
           </Paragraph>
         </FeatureCopy>
         <FeatureTeaser reversed>
@@ -180,10 +176,9 @@ const IndexPage = () => (
             <Highlight>Stop calculating.</Highlight> Start eating.
           </Heading2>
           <Paragraph>
-            No carbs. No calories. Just a picture of your food to know how much
-            insulin you need. Type 1 will tune your estimated doses and alter
-            your recommended insulin based on real time blood sugar levels and
-            personal insulin sensitivity.
+            No carbs. No calories. Just a picture of your food to remember how
+            much insulin you need. Type 1 will show you an insulin dose based on
+            your given values.
           </Paragraph>
         </FeatureCopy>
         <FeatureTeaser>

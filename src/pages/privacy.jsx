@@ -78,22 +78,19 @@ export default function () {
             <li>
               <Paragraph>
                 We do not endorse the use of hormones such as insulin, we simply
-                help people calculate their insulin doses at a more accurate
-                level.
+                help people map their own insulin doses to a picture of their
+                food.
               </Paragraph>
             </li>
             <li>
               <Paragraph>
                 We are not liable for the user intake of insulin, the values are
-                based on personal approximation. We generate these values based
-                on previous data and AI recognized pictures.
+                based on personal approximation and estimation.
               </Paragraph>
             </li>
             <li>
               <Paragraph>
-                The amounts of insulin to be taken before a meal or for
-                correction are recommendations which the users will obey at
-                their own will.
+                We do not calculate insulin doses for the user.
               </Paragraph>
             </li>
           </ul>
@@ -104,8 +101,8 @@ export default function () {
             You are responsible for your own health. Type 1 is not a medical
             organization, and we will not provide you with any medical advice or
             diagnosis. The purpose of the Services is solely to help our users
-            manage their diabetes more efficiently and easily by giving
-            recommended insulin doses. We cannot guarantee any health, weight
+            manage their diabetes more efficiently and easily by mapping insulin
+            doses to food pictures. We cannot guarantee any health, weight
             and/or fitness results or improvements. Our Services are only
             intended for people who depend on insulin, and please do not use our
             application if you suffer from, or might suffer from, any medical
@@ -114,27 +111,6 @@ export default function () {
             have been the result, direct or indirect, of any use or misuse of
             our app.
           </Paragraph>
-
-          <Heading5>Formulas used for calculations</Heading5>
-          <Paragraph>
-            Sensitivity factor will help generate the formula for AI. In other
-            words, it will show how much blood glucose will be lowered by one
-            unit of insulin. (50 factor = 50 lowered with one unit) → Essential
-            for correction units.
-          </Paragraph>
-          <ul>
-            <li>
-              <Paragraph>
-                Sensitivity factor = 1700/Total insulin taking in a day
-              </Paragraph>
-            </li>
-            <li>
-              <Paragraph>
-                Correction units = (Current blood sugar -Target blood sugar) /
-                Sensitivity Factor
-              </Paragraph>
-            </li>
-          </ul>
         </PrivacyWrapper>
       </PrivacySection>
     </Layout>
