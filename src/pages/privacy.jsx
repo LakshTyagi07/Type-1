@@ -51,7 +51,7 @@ export default function () {
           <Heading3>No Collection of Data</Heading3>
           <Paragraph>
             Being sensitive to user data and privacy, we do not store any
-            information outside of the user’s device. When you download Type 1,
+            information outside of the user’s device. When you download Type1,
             you provide your age and sex which stays with you as long as
             application stays on your device. Your age and sex are needed to
             determine your estimated insulin sensitivity. No health related data
@@ -63,7 +63,7 @@ export default function () {
 
           <Paragraph>
             We value your privacy which is the reason we don’t ask you to create
-            an account with Type 1. Not worrying about your data should be a
+            an account with Type1. Not worrying about your data should be a
             right and not a privilege. Which is why you can stay off-grid
             without having to enter any personal information. Even your name.
             You can backup and restore your data from icloud if you change your
@@ -98,7 +98,7 @@ export default function () {
           <Heading3>Health and nutritional information</Heading3>
 
           <Paragraph>
-            You are responsible for your own health. Type 1 is not a medical
+            You are responsible for your own health. Type1 is not a medical
             organization, and we will not provide you with any medical advice or
             diagnosis. The purpose of the Services is solely to help our users
             manage their diabetes more efficiently and easily by mapping insulin

@@ -54,7 +54,7 @@ export default function () {
       id: 2,
       label: "What other benefits do I receive?",
       answer:
-        "Other than knowing your insulin doses with a click of a button, Type 1 will help you stay in check with your blood sugar levels. You will receive constant reminders to check your blood sugar and over time, you will have a large database of the food you ate and how your blood sugar levels stayed after those foods. You can also view how much insulin you took for a meal, for correction, and you can also have a picture of your meals at your fingertips.",
+        "Other than knowing your insulin doses with a click of a button, Type1 will help you stay in check with your blood sugar levels. You will receive constant reminders to check your blood sugar and over time, you will have a large database of the food you ate and how your blood sugar levels stayed after those foods. You can also view how much insulin you took for a meal, for correction, and you can also have a picture of your meals at your fingertips.",
     },
     {
       id: 3,
@@ -68,10 +68,10 @@ export default function () {
     <Layout>
       <Hero>
         <HeroWrapper>
-          <Image src="help.png" className="hero-image" alt="Type 1 Help" />
+          <Image src="help.png" className="hero-image" alt="Type1 Help" />
           <Heading1>Your questions answered.</Heading1>
           <Paragraph>
-            If you've got any questions about Type 1, read on below for answers
+            If you've got any questions about Type1, read on below for answers
             to some of the most common ones we've already been asked. Feel free
             to contact us if you have any other questions. We will be happy to
             assist you as soon as possible.

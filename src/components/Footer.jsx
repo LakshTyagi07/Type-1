@@ -40,7 +40,7 @@ export default function ({ theme, toggleTheme }) {
   return (
     <FooterView>
       <FooterWrapper>
-        <Copyright>© Type 1 {new Date().getFullYear()}.</Copyright>
+        <Copyright>© Type1 {new Date().getFullYear()}.</Copyright>
         <FooterLinks>
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/support">Support</FooterLink>
