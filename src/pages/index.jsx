@@ -154,8 +154,8 @@ const IndexPage = () => (
             </span>
           </Heading2>
           <Paragraph>
-            Help Type 1 recognize the food you eat. After labeling your food for
-            the first time, Type 1 will identify the meal and remind you with
+            Help Type1 recognize the food you eat. After labeling your food for
+            the first time, Type1 will identify the meal and remind you with
             your insulin dose the next time you click a picture of it.
           </Paragraph>
         </FeatureCopy>
@@ -177,7 +177,7 @@ const IndexPage = () => (
           </Heading2>
           <Paragraph>
             No carbs. No calories. Just a picture of your food to remember how
-            much insulin you need. Type 1 will show you an insulin dose based on
+            much insulin you need. Type1 will show you an insulin dose based on
             your given values.
           </Paragraph>
         </FeatureCopy>
@@ -233,7 +233,7 @@ const IndexPage = () => (
 
     <Banner>
       <BannerWrapper>
-        <Heading4>Start Using Type 1</Heading4>
+        <Heading4>Start Using Type1</Heading4>
         <StoreButtons>
           <ExternalLink href="/">
             <Image className="store-cta" src="appstore.png" />
